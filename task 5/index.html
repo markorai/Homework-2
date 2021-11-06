@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pomodoro</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+
+<body>
+    <div class="container fixed-bg">
+        <h1>Pomodoro timer</h1>
+        <div id="time">
+            <span id="minutes">25</span>
+            <span id="colon">:</span>
+            <span id="seconds">00</span>
+        </div>
+        <div id="filler"></div>
+        <div class="btn-group" id="buttons">
+            <button type="button" class="button" id="work">START</button>
+            <button type="button" class="button" id="shortBreak">SHORT BREAK</button>
+            <button type="button" class="button" id="longBreak">LONG BREAK</button>
+            <button type="button" class="button" id="stop">RESET</button>
+            <audio id="sound">
+                <source src="./audios/start.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+       
+    </div>
+   
+    <script src="./script.js"></script>
+</body>
+
+</html> 
