@@ -48,6 +48,11 @@ function removeItem(e) {
     if (confirm("Are you sure?")) {
       var li = e.target.parentElement;
       itemList.removeChild(li);
+      Array.from(all_tasks).forEach((task)=>{
+        if(task.textContent == li.innerText.replace("X","") )
+                searchResults.removeChild(task);
+                
+      })
     }
   }
 }
@@ -77,7 +82,8 @@ function filterItems(e) {
 function showItems(e){
   searchResults.style.display = "block";
   var input = e.target.value;
-
+  
+   // Convert HTMLCollection to an array
   Array.from(all_tasks).forEach((task)=>{
     var taskName = task.firstChild.textContent;
     if(taskName.toLowerCase().indexOf(input) != -1){

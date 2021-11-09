@@ -4,21 +4,16 @@ function startQuiz() {
 }
 
 var pos = 0, test, test_staus, question, option, options, opA, opB, opC, opD, score = 0;
-var questions = [
-  ["Which of the following is true about variable naming conventions in JavaScript?", "You should not use any of the JavaScript reserved keyword as variable name.", " JavaScript variable names should not start with a numeral (0-9).", "Both of the above.","None of the above.", "C"],
-  ["Which of the following function of Array object joins all elements of an array into a string?", "concat()", "join()", "pop()", "map()", "B"],
-  ["Which of the following function of String object returns the calling string value converted to upper case while respecting the current locale?", "toLowerUpperCase()","toUpperCase()","toString()","substring()","A"],
-  ["Which of the following function of String object is used to find a match between a regular expression and a string, and to replace the matched substring with a new substring?", "concat()", "match()", "search()", "replace()", "D"]
-];
+
 
 (function() {
   const myQuestions = [
     {
-      question: "How many fingers are on the foot of a man?",
+      question: "What is the scientific name of a butterfly?",
       answers: {
-        a: "one",
-        b: "Five",
-        c: "Three"
+        a: "Apis",
+        b: "Coleoptera",
+        c: "Rhopalocera"
        },
       correctAnswer: "c" 
     
@@ -115,12 +110,12 @@ var questions = [
   ];
 
   function buildQuiz() {
-    // we'll need a place to store the HTML output
+    // store HTML output
     const output = [];
 
     // for each question...
     myQuestions.forEach((currentQuestion, questionNumber) => {
-      // we'll want to store the list of answer choices
+      //  store list of answer choices
       const answers = [];
 
       // and for each available answer...

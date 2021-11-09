@@ -1,10 +1,8 @@
-
 var audio = document.getElementById("sound");
 
 function play () {
   audio.play();
 }
-
 
  var pomodoro = {
     started : false,
